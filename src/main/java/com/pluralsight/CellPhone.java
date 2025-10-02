@@ -3,7 +3,7 @@ package com.pluralsight;
 public class CellPhone {
 
     // declares variables to be used in formatting the clas
-    private int serialNumber;
+    private String serialNumber;
     private String model;
     private String carrier;
     private String phoneNumber;
@@ -11,7 +11,7 @@ public class CellPhone {
 
     // parameterless constructor with default values
     public CellPhone() {
-        this.serialNumber = 0;
+        this.serialNumber = "0";
         this.model = "";
         this.carrier = "";
         this.phoneNumber = "";
@@ -20,11 +20,11 @@ public class CellPhone {
 
     // getter and setter for serialNumber
 
-    public int getSerialNumber() {
+    public String getSerialNumber() {
         return serialNumber;
     }
 
-    public void setSerialNumber(int serialNumber) {
+    public void setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
     }
 
