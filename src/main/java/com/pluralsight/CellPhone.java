@@ -63,4 +63,8 @@ public class CellPhone {
     public void setOwner(String owner) {
         this.owner = owner;
     }
+
+    public void dial(String otherNumber) {
+        System.out.printf("%s's phone is calling %s.", owner, otherNumber);
+    }
 }

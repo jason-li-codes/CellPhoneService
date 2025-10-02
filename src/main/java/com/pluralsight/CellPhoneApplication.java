@@ -20,11 +20,13 @@ public class CellPhoneApplication {
         JasonsPhone.setOwner(askUser("Who is the owner of the phone?"));
 
         // prints attributes using getters
-        System.out.println(JasonsPhone.getSerialNumber());
-        System.out.println(JasonsPhone.getModel());
-        System.out.println(JasonsPhone.getCarrier());
-        System.out.println(JasonsPhone.getPhoneNumber());
-        System.out.println(JasonsPhone.getOwner());
+        System.out.println("Serial number: " + JasonsPhone.getSerialNumber());
+        System.out.println("Model: " + JasonsPhone.getModel());
+        System.out.println("Carrier: " + JasonsPhone.getCarrier());
+        System.out.println("Phone Number: " + JasonsPhone.getPhoneNumber());
+        System.out.println("Owner: " + JasonsPhone.getOwner());
+
+        JasonsPhone.dial("855-555-2222");
 
     }
 
