@@ -9,12 +9,15 @@ public class CellPhoneApplication {
 
     public static void main(String[] args) {
 
-        // creates CellPhone objects
+        // creates CellPhone object
         CellPhone JasonsPhone = new CellPhone();
-        CellPhone EricsPhone = new CellPhone();
 
         // sets JasonsPhone
         setPhone(JasonsPhone);
+
+        // creates EricsPhone by overloading constructor
+        CellPhone EricsPhone = new CellPhone(
+                "1234567", "iPhone X", "AT&T", "(123)456-7890", "Eric");
 
         // displays info for both CellPhones
         display(JasonsPhone);
@@ -23,6 +26,8 @@ public class CellPhoneApplication {
         // have each phone call the other's number using getter
         JasonsPhone.dial(EricsPhone.getPhoneNumber());
         EricsPhone.dial(JasonsPhone.getPhoneNumber());
+        JasonsPhone.dial(EricsPhone);
+
 
     }
 

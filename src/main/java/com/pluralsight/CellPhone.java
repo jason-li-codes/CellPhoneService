@@ -18,6 +18,14 @@ public class CellPhone {
         this.owner = "";
     }
 
+    public CellPhone(String serialNumber, String model, String carrier, String phoneNumber, String owner){
+        this.serialNumber = serialNumber;
+        this.model = model;
+        this.carrier = carrier;
+        this.phoneNumber = phoneNumber;
+        this.owner = owner;
+    }
+
     // getter and setter for serialNumber
 
     public String getSerialNumber() {
@@ -67,4 +75,9 @@ public class CellPhone {
     public void dial(String otherNumber) {
         System.out.printf("%s's phone is calling %s.", owner, otherNumber);
     }
+
+    public void dial(CellPhone phone) {
+        System.out.printf("%s's phone is calling %s.", owner, phone.getPhoneNumber());
+    }
+
 }
