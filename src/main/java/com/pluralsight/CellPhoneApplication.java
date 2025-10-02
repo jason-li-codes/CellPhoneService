@@ -16,7 +16,11 @@ public class CellPhoneApplication {
         JasonsPhone.setPhoneNumber(askUser("What is the phone number?"));
         JasonsPhone.setOwner(askUser("Who is the owner of the phone?"));
 
-
+        System.out.println(JasonsPhone.getSerialNumber());
+        System.out.println(JasonsPhone.getModel());
+        System.out.println(JasonsPhone.getCarrier());
+        System.out.println(JasonsPhone.getPhoneNumber());
+        System.out.println(JasonsPhone.getOwner());
 
     }
 
