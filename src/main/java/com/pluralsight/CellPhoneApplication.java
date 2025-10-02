@@ -9,24 +9,18 @@ public class CellPhoneApplication {
 
     public static void main(String[] args) {
 
-        // creates a CellPhone object called JasonsPhone
+        // creates CellPhone objects
         CellPhone JasonsPhone = new CellPhone();
+        CellPhone EricsPhone = new CellPhone();
 
-        // sets CellPhone attributes by using setters and prompting user with method
-        JasonsPhone.setSerialNumber(askUser("What is the serial number?"));
-        JasonsPhone.setModel(askUser("What model is the phone?"));
-        JasonsPhone.setCarrier(askUser("Who is the carrier?"));
-        JasonsPhone.setPhoneNumber(askUser("What is the phone number?"));
-        JasonsPhone.setOwner(askUser("Who is the owner of the phone?"));
+        setPhone(JasonsPhone);
+        setPhone(EricsPhone);
 
-        // prints attributes using getters
-        System.out.println("Serial number: " + JasonsPhone.getSerialNumber());
-        System.out.println("Model: " + JasonsPhone.getModel());
-        System.out.println("Carrier: " + JasonsPhone.getCarrier());
-        System.out.println("Phone Number: " + JasonsPhone.getPhoneNumber());
-        System.out.println("Owner: " + JasonsPhone.getOwner());
+        display(JasonsPhone);
+        display(EricsPhone);
 
-        JasonsPhone.dial("855-555-2222");
+
+
 
     }
 
@@ -38,6 +32,29 @@ public class CellPhoneApplication {
 
         // returns a string that is the user input on the next line
         return input.nextLine().trim();
+
+    }
+
+    public static void setPhone(CellPhone phone) {
+
+        // sets CellPhone attributes by using setters and prompting user with method
+        phone.setSerialNumber(askUser("What is the serial number?"));
+        phone.setModel(askUser("What model is the phone?"));
+        phone.setCarrier(askUser("Who is the carrier?"));
+        phone.setPhoneNumber(askUser("What is the phone number?"));
+        phone.setOwner(askUser("Who is the owner of the phone?"));
+
+    }
+
+    public static void display(CellPhone phone) {
+
+        // prints attributes using getters
+        System.out.printf("Info for %s: ", phone.toString());
+        System.out.println("Serial number: " + phone.getSerialNumber());
+        System.out.println("Model: " + phone.getModel());
+        System.out.println("Carrier: " + phone.getCarrier());
+        System.out.println("Phone Number: " + phone.getPhoneNumber());
+        System.out.println("Owner: " + phone.getOwner());
 
     }
 
