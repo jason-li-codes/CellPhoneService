@@ -2,7 +2,7 @@ package com.pluralsight;
 
 public class CellPhone {
 
-    // declares variables to be used in formatting the clas
+    // declares variables to be used in formatting the class
     private String serialNumber;
     private String model;
     private String carrier;

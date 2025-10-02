@@ -13,14 +13,16 @@ public class CellPhoneApplication {
         CellPhone JasonsPhone = new CellPhone();
         CellPhone EricsPhone = new CellPhone();
 
+        // sets JasonsPhone
         setPhone(JasonsPhone);
-        setPhone(EricsPhone);
 
+        // displays info for both CellPhones
         display(JasonsPhone);
         display(EricsPhone);
 
-
-
+        // have each phone call the other's number using getter
+        JasonsPhone.dial(EricsPhone.getPhoneNumber());
+        EricsPhone.dial(JasonsPhone.getPhoneNumber());
 
     }
 
@@ -38,6 +40,7 @@ public class CellPhoneApplication {
     public static void setPhone(CellPhone phone) {
 
         // sets CellPhone attributes by using setters and prompting user with method
+        System.out.println("Let's set up this phone.");
         phone.setSerialNumber(askUser("What is the serial number?"));
         phone.setModel(askUser("What model is the phone?"));
         phone.setCarrier(askUser("Who is the carrier?"));
@@ -49,7 +52,7 @@ public class CellPhoneApplication {
     public static void display(CellPhone phone) {
 
         // prints attributes using getters
-        System.out.printf("Info for %s: ", phone.toString());
+        System.out.printf("Info for %s: \n", phone.toString());
         System.out.println("Serial number: " + phone.getSerialNumber());
         System.out.println("Model: " + phone.getModel());
         System.out.println("Carrier: " + phone.getCarrier());
